@@ -1,0 +1,9 @@
+nltk
+torch
+numpy
+json
+gtts
+yfinance
+pandas
+lxml
+requests

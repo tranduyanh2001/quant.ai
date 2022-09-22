@@ -1,0 +1,82 @@
+{"intents": [
+    {"tag": "greeting",
+     "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
+     "responses": ["Hello, thanks for visiting", "Good to see you again", "Hi there, how can I help?"],
+     "context_set": ""
+    },
+    {"tag": "goodbye",
+     "patterns": ["Bye", "See you later", "Goodbye"],
+     "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."]
+    },
+    {"tag": "thanks",
+     "patterns": ["Thanks", "Thank you", "That's helpful"],
+     "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+    {"tag": "job",
+     "patterns": ["What do you do?", "What is your job?", "What are you?", "Who are you?" ],
+     "responses": ["I'm a stock bot that uses information from yahoo finance", "I help people with stock info from yahoo finance!", "Do you need information about stocks? I'm your gal!"]
+    },
+    {"tag": "stock",
+     "patterns": ["Which stocks do you have?", "What kinds of information are there?", "What information do you provide?" ],
+     "responses": ["I provide information on all stocks", "I have stock information like current price, profit margins, and my recommendation!"]
+    },
+    {"tag": "payments",
+     "patterns": ["Do you take credit cards?", "Do you accept Mastercard?", "Are you cash only?", "Are you free?", "How much do you cost?"],
+     "responses": ["We accept VISA, Mastercard and AMEX", "We accept most major credit cards"]
+    },
+    {"tag": "opening_price",
+     "patterns": ["What price did it open today?", "What was the opening price?", "How much was it in the morning?"],
+     "responses": ["The opening price was ", "It opened at "]
+    },
+    {"tag": "current price",
+     "patterns": ["What is the current price?", "I'd like to know the stock price", "How much does the stock cost?" ],
+     "responses": ["The stock costs ", "The price of the stock is ", "Right now, it's around "],
+     "context_set": "stock_given"
+    },
+    {"tag": "sector",
+     "patterns": ["What is the sector of?", "I'd like to know the sector", "Which sector is the stock?", "Which sector is this stock?"],
+     "responses": ["The sector is ", "So the sector is "],
+     "context_filter": "stock_given"
+    },
+    {"tag": "recommendation",
+    "patterns": ["Do you recommend this stock?", "Is this a buy?", "Should I buy this stock?", "Do you think this stock is good?"],
+    "responses": ["According to Yahoo, this stock is a ", "I think you should "],
+    "context_filter": "stock_given"
+   },
+   {"tag": "full_name",
+   "patterns": ["What is the full name of the stock?", "Is this the long form name of the stock?", "what is the company called?", "What is the name of the company?", "What is it's name?", "How do I call this company?"],
+   "responses": ["The full name is ", "So the actual name is "],
+   "context_filter": "stock_given"
+    },
+    {"tag": "returnOnEquity",
+    "patterns": ["What is the return on equity?", "I'd like to know the profitability", "How profitable is this stock?", "Does this stock make money?"],
+    "responses": ["The sector is ", "So the sector is "],
+    "context_filter": "stock_given"
+    },
+    {"tag": "new_stock",
+    "patterns": ["I want to talk about a new stock", "I'd like to know about another stock", "How do I restart?", "I want to know about a second stock."],
+    "responses": ["Please type 'quit' and start again ", "Sorry, you'll have to exit this program by typing 'quit' and restarting me!"],
+    "context_filter": "stock_given"
+    },
+    {"tag": "industry",
+    "patterns": ["Which industry is the company?", "What does the company make?", "What service does the company provide?", "I want to know more about the company.", "Tell me more about the company", "what do they do?", "what do they make?"],
+    "responses": ["The company is the industry of ", "They make "],
+    "context_filter": "stock_given"
+    },
+    {"tag": "profitMargins",
+    "patterns": ["How much profit does the company have?", "How much profit did the company make last quarter or year?", "Is the company profitable?", "What is the profit margin?"],
+    "responses": ["The profit margins are ", "The company has been profitable in the past quarter. They have made "],
+    "context_filter": "stock_given"
+    },
+    {"tag": "dayLow",
+    "patterns": ["How did the stock do today?", "What was the lowest price of the stock today?", "How did it go today?", "How bad is the stock doing right now?"],
+    "responses": ["It bottomed at ", "Today, the lowest price of the stock was ", "It dipped to "],
+    "context_filter": "stock_given"
+    },
+    {"tag": "averageVolume",
+    "patterns": ["How many people trade this stock?", "What is the average trading volume?", "What is it's daily trading volume", "How many people are interested in the stock?"],
+    "responses": ["It has an average daily trading volume of ", "The averae volume is "],
+    "context_filter": "stock_given"
+    }
+]
+}
