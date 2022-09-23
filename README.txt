@@ -3,10 +3,11 @@
 Hi, this is Quant.AI done by Duy Anh, Vignesh and Phone
 
 Order to run the files is:
-1. nltk_utils.py
-2. model.py
-3. train.py
-4. chat.py
+1. requirements.txt
+2. nltk_utils.py
+3. model.py
+4. train.py
+5. chat.py
 
 Once you run chat.py, you will be prompted to input the 4 letter ticker. Please only input the 4 letter ticker and click enter.
 You can then text to Quant.AI as per normal.
