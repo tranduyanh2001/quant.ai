@@ -29,7 +29,7 @@
      "responses": ["The opening price was ", "It opened at "]
     },
     {"tag": "current price",
-     "patterns": ["What is the current price?", "I'd like to know the stock price", "How much does the stock cost?" ],
+     "patterns": ["How is the stock today?","What is the current price?", "I'd like to know the stock price", "How much does the stock cost?" ],
      "responses": ["The stock costs ", "The price of the stock is ", "Right now, it's around "],
      "context_set": "stock_given"
     },
@@ -50,7 +50,7 @@
     },
     {"tag": "returnOnEquity",
     "patterns": ["What is the return on equity?", "I'd like to know the profitability", "How profitable is this stock?", "Does this stock make money?"],
-    "responses": ["The sector is ", "So the sector is "],
+    "responses": ["Return of the investment would be a multiple of ","The company has return ratio of ", "The profit margin of the company is "],
     "context_filter": "stock_given"
     },
     {"tag": "new_stock",
@@ -69,7 +69,7 @@
     "context_filter": "stock_given"
     },
     {"tag": "dayLow",
-    "patterns": ["How did the stock do today?", "What was the lowest price of the stock today?", "How did it go today?", "How bad is the stock doing right now?"],
+    "patterns": ["What is the lowest price of this stock today?","What is the lowest price of this stock?","How did the stock do today?", "What was the lowest price of the stock today?", "How did it go today?", "How bad is the stock doing right now?"],
     "responses": ["It bottomed at ", "Today, the lowest price of the stock was ", "It dipped to "],
     "context_filter": "stock_given"
     },
@@ -80,3 +80,4 @@
     }
 ]
 }
+
