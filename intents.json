@@ -21,7 +21,7 @@
      "responses": ["I provide information on all stocks", "I have stock information like current price, profit margins, and my recommendation!"]
     },
     {"tag": "payments",
-     "patterns": ["Do you take credit cards?", "Do you accept Mastercard?", "Are you cash only?", "Are you free?", "How much do you cost?"],
+     "patterns": ["Do you take credit cards?", "Do you accept Mastercard?", "Are you cash only?", "Are you free?", "How much do you cost?", "How do I pay?","How do I make payments?", "How do I buy?"],
      "responses": ["We accept VISA, Mastercard and AMEX", "We accept most major credit cards"]
     },
     {"tag": "opening_price",
@@ -34,12 +34,12 @@
      "context_set": "stock_given"
     },
     {"tag": "sector",
-     "patterns": ["What is the sector of?", "I'd like to know the sector", "Which sector is the stock?", "Which sector is this stock?"],
+     "patterns": ["What is the sector of?", "I'd like to know the sector", "Which sector is the stock?", "Which sector is this stock?","What sector is this company from?"],
      "responses": ["The sector is ", "So the sector is "],
      "context_filter": "stock_given"
     },
     {"tag": "recommendation",
-    "patterns": ["Do you recommend this stock?", "Is this a buy?", "Should I buy this stock?", "Do you think this stock is good?"],
+    "patterns": ["Do you recommend this stock?", "Is this a buy?", "Should I buy this stock?", "Do you think this stock is good?","Is it a good idea to invest?", "should i buy?", "Do I buy?", "Shall I purchase this stock?", "Should I buy this stock?"],
     "responses": ["According to Yahoo, this stock is a ", "I think you should "],
     "context_filter": "stock_given"
    },
@@ -59,17 +59,17 @@
     "context_filter": "stock_given"
     },
     {"tag": "industry",
-    "patterns": ["Which industry is the company?", "What does the company make?", "What service does the company provide?", "I want to know more about the company.", "Tell me more about the company", "what do they do?", "what do they make?"],
+    "patterns": ["Which industry is the company?", "What does the company make?", "What service does the company provide?", "I want to know more about the company.", "Tell me more about the company", "what do they do?", "what do they make?", "What does it do?"],
     "responses": ["The company is the industry of ", "They make "],
     "context_filter": "stock_given"
     },
     {"tag": "profitMargins",
-    "patterns": ["How much profit does the company have?", "How much profit did the company make last quarter or year?", "Is the company profitable?", "What is the profit margin?"],
+    "patterns": ["How much profit does the company have?", "How much profit did the company make last quarter or year?", "Is the company profitable?", "What is the profit margin?", "What is the margin?"],
     "responses": ["The profit margins are ", "The company has been profitable in the past quarter. They have made "],
     "context_filter": "stock_given"
     },
     {"tag": "dayLow",
-    "patterns": ["What is the lowest price of this stock today?","What is the lowest price of this stock?","How did the stock do today?", "What was the lowest price of the stock today?", "How did it go today?", "How bad is the stock doing right now?"],
+    "patterns": ["What is the lowest price of this stock today?","What is the lowest price of this stock?","How did the stock do today?", "What was the lowest price of the stock today?", "How did it go today?", "How bad is the stock doing right now?","How is it?","Lowest price","What is the lowest?"],
     "responses": ["It bottomed at ", "Today, the lowest price of the stock was ", "It dipped to "],
     "context_filter": "stock_given"
     },
